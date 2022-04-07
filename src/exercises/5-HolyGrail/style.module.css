@@ -1,8 +1,10 @@
 .picture {
   height: 300px;
+  marginleft: 550px;
 }
 
+
 .wrapper {
-  height: 500px;
-  background-color: #eee;
+  height: 280px;
+  width: 350px;
 }
