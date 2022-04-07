@@ -7,14 +7,13 @@
 
 import { FC, useState } from "react";
 
-const IncremenButton: FC<{ count: number }> = ({ count }) => {
-  const [savedCount, setSavedCount] = useState<number>(count);
+const IncremenButton: FC<{ increment: () => void }> = ({ increment }) => {
+
+  const setSavedCount = () => increment() ;
 
   return (
     <button
-      onClick={() => {
-        setSavedCount(savedCount + 1);
-      }}
+      onClick={setSavedCount}
     >
       Increment
     </button>
@@ -22,13 +21,17 @@ const IncremenButton: FC<{ count: number }> = ({ count }) => {
 };
 
 const Counter = () => {
-  const [count] = useState<number>(0);
+
+  const [count , setCount] = useState<number>(0);
+  const addOne = () => {
+    setCount( prevCount => prevCount + 1)
+  }
 
   return (
     <div>
       <h1>My Counter 2</h1>
       <div>{count}</div>
-      <IncremenButton count={count} />
+      <IncremenButton increment={addOne} />
     </div>
   );
 };
