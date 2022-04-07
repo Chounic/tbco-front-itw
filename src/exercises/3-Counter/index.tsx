@@ -22,8 +22,9 @@ const Counter = () => {
       <pre>countB: {countB}</pre>
       <div>
         <button
-          onClick={() => {
+          onClick={(e) => {
             setCountB(countB + 1);
+            e.stopPropagation();
           }}
         >
           Increment count B
