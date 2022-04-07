@@ -5,12 +5,21 @@
  * Every second, I want to increment by one the count variable.
  */
 
-const Counter = () => {
-  let count = 0;
+import { useEffect, useState } from "react";
 
-  setInterval(() => {
-    count = count + 1;
-  }, 1);
+const Counter = () => {
+
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+
+    const timer = setInterval(() => {
+      setCount((prevCount) => prevCount + 1)
+    }, 1000);
+
+    return () => clearInterval(timer);
+
+  }, [])
 
   return (
     <div>
