@@ -16,17 +16,17 @@ const HolyGrail = () => {
       <h1>Holy Grail</h1>
       <img src={src} alt={"Holy Grail"} className={css.picture} />
 
-      <div className={css.wrapper} style={{  backgroundColor: '#83CAFF', textTransform: "uppercase", textAlign: "center", display: "flex", flexDirection: "column", border: "4px black solid", paddingTop: 1}} >
-        <header style={{fontSize: '3rem', fontWeight: 400, height: 50, display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
+      <div className={css.wrapper} >
+        <header className={css.headerFooter} >
           <div>Header</div>
         </header>
-        <main style={{ padding: 0, display: "flex", flex: 4, justifyContent: "", borderTop: "4px black solid", borderBottom: "4px black solid" }}>
+        <main className={css.main}>
 
-          <div style={{  fontWeight: 600, paddingTop: 0, backgroundColor: "#CC99CC", flex: 1, fontSize: 14  }}>
+          <div className={css.menu}>
 
-            <p style={{ margin: 0 }}>Menu</p>
+            <p className={css.menuTitle}>Menu</p>
 
-            <nav style={{ textAlign: "left", marginLeft: 3 }}>
+            <nav className={css.nav}>
               <div>item 1</div>
               <div>item 2</div>
               <div>item 3</div>
@@ -35,22 +35,22 @@ const HolyGrail = () => {
             </nav>
 
           </div>
-          <section style={{ flex: 3, borderLeft: "4px black solid", borderRight: "4px black solid", backgroundColor: "#FFCCCC"}} >
+          <section className={css.section}>
 
-            <div style={{ margin: 0, padding: 0, fontSize: '2rem', fontWeight: 400}}>CONTENT</div>
+            <div className={css.sectionTitle}>CONTENT</div>
 
-            <p style={{  textTransform: "none", textAlign: "left", fontSize: '0.6rem', fontWeight: 500, padding: 5, marginTop: 0}}>Lorem ipsum dolor sit amet. Eos ipsum autem vel dolorem nisi hic consequuntur placeat et totam nesciunt sed dolorem incidunt rem fugit nihil. Vel accusantium optio eum autem rerum et sequi quos et dolore porro ea doloribus blanditiis.</p>
+            <p className={css.sectionContent}>Lorem ipsum dolor sit amet. Eos ipsum autem vel dolorem nisi hic consequuntur placeat et totam nesciunt sed dolorem incidunt rem fugit nihil. Vel accusantium optio eum autem rerum et sequi quos et dolore porro ea doloribus blanditiis.</p>
 
 
           </section>
-          <aside style={{ backgroundColor: "#CC99CC", flex: 1, fontSize: '2.2rem', fontWeight: 400}}>
+          <aside className={css.aside}>
 
             <div>ad</div>
             <div>ad</div>
 
           </aside>
         </main>
-        <footer  style={{fontSize: '2.8rem', fontWeight: 400, height: 50, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Footer</footer>
+        <footer className={css.headerFooter}>Footer</footer>
       </div>
     </Fragment>
   );

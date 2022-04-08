@@ -5,6 +5,77 @@
 
 
 .wrapper {
+  justify-content: center;
   height: 280px;
   width: 350px;
+  background-color: #83CAFF; 
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: 4px black solid;
+}
+
+.headerFooter {
+  font-size: 3rem;
+  font-weight: 400;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center 
+}
+
+.main {
+  padding: 0; 
+  display: flex; 
+  flex: 4; 
+  border-top: 4px black solid; 
+  border-bottom: 4px black solid
+}
+
+.menu {
+  font-weight: 600; 
+  padding-top: 0; 
+  background-color: #CC99CC; 
+  flex: 1; 
+  font-size: 0.9rem
+}
+
+.menuTitle {
+  margin: 0
+}
+
+.nav {
+  text-align: left;
+  margin-left: 3px
+}
+
+.section { 
+  flex: 3;
+  border-left: 4px black solid;
+  border-right: 4px black solid;
+  background-color: #FFCCCC
+}
+
+.sectionTitle {
+  margin: 0; 
+  padding: 0; 
+  font-size: 2rem; 
+  font-weight: 400
+}
+
+.aside { 
+  background-color: #CC99CC; 
+  flex: 1; 
+  font-size: 2.2rem; 
+  font-weight: 400
+}
+
+.sectionContent {
+  text-transform: none; 
+  text-align: left; 
+  font-size: 0.6rem; 
+  font-weight: 500; 
+  padding: 5px; 
+  margin-top: 0
 }
